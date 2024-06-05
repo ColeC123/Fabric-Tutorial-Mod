@@ -1,5 +1,8 @@
 package net.cole.tutorialmod;
 
+import net.cole.tutorialmod.block.ModBlocks;
+import net.cole.tutorialmod.item.ModItemGroups;
+import net.cole.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +21,9 @@ public class TutorialMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
